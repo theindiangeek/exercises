@@ -28,3 +28,5 @@ The configuration is stored in environment variables and can be loaded via a `.e
 The schema will automatically be created the first time the API is started and successfully connects to the database.  The Database has to be created first using the command below:
 
 ```CREATE DATABASE postgres;```
+
+![alt text](https://github.com/edjx/exercises/blob/main/moviemaster.png?raw=true "Movie Master Application")
