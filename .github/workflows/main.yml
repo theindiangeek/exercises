@@ -45,5 +45,5 @@ jobs:
         name: Deploy
         uses: WyriHaximus/github-action-helm3@v2
         with:
-          exec: helm upgrade -i --force app app/
+          exec: helm upgrade -i --force app app-helm/
           kubeconfig: '${{ secrets.KUBECONFIG }}'
