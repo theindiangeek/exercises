@@ -65,6 +65,7 @@ sudo bash -c "echo $IP api.edjx.com web.edjx.com >> /etc/hosts"
 kubectl create secret generic pat --from-literal="pat=$PAT"
 
 #Deploy your runner as a container in the k8s environment:
+#https://lenskart.zoom.us/j/99953751624?pwd=NEZZWG9LeDhrTHRsQ2xZS2M1UnhUdz09
 #Post this step the runner shows up in the github actions/settings section:
 kubectl apply -f runner.yaml
 
