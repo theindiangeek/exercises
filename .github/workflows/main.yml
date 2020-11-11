@@ -43,7 +43,7 @@ jobs:
           tags: theindiangeek/edjx-web:latest
       - 
         name: Deploy
-        uses: WyriHaximus/github-action-helm2@v2
+        uses: WyriHaximus/github-action-helm3@v2
         with:
           exec: helm upgrade -i --force app app-helm/
           kubeconfig: '${{ secrets.KUBECONFIG }}'
