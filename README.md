@@ -30,3 +30,5 @@ The schema will automatically be created the first time the API is started and s
 ```CREATE DATABASE postgres;```
 
 ![alt text](https://github.com/edjx/exercises/blob/main/moviemaster.png?raw=true "Movie Master Application")
+
+#test commit
