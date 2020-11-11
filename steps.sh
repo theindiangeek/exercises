@@ -5,6 +5,8 @@
 
 #I have used internal k8s service names to establilsh communication between postgres, the ui and the api
 
+#I'm using helm v3 in the pipeline to deploy the code
+
 #Initialize the variables to be used in this script
 export CLUSTERNAME=test
 export REGION=blr1
