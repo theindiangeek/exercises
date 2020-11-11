@@ -35,6 +35,7 @@ kubectl wait --for=condition=Ready pods name=tiller --timeout=600s -n kube-syste
 kubectl create clusterrolebinding default-clusteradmin --clusterrole=cluster-admin --serviceaccount=kube-system:default
 
 #Deploy cert manager for letsencrypt certificates
+#Used by the ingress object to call certmanager to provision ssl certificates
 kubectl create namespace cert-manager
 helm install --name=cert-manager --version v0.14.1 --namespace cert-manager jetstack/cert-manager
 kubectl apply --validate=false -f https://github.com/jetstack/cert-manager/releases/download/v0.14.1/cert-manager.crds.yaml
@@ -58,3 +59,6 @@ kubectl create secret generic pat --from-literal="pat=$PAT"
 kubectl apply -f runner.yaml
 
 #Deploy your pipeline from this point onwards via github actions.
+
+#Once the pipeline completes, you should be able to access your app on your browser via https://web.edjx.com
+#The certificates come from LetsEncrypt so the CA is not trusted on all browsers.
