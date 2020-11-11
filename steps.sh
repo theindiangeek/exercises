@@ -1,3 +1,8 @@
+#This script is run with the assumtion that you have already set up secrets in the github repo which will be used by the pipeline forked via github actions:
+#DOCKERHUB_TOKEN
+#DOCKERHUB_USERNAME
+#KUBECONFIG
+
 #Initialize the variables to be used in this script
 export CLUSTERNAME=test
 export REGION=blr1
