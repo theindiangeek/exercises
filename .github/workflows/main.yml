@@ -40,4 +40,4 @@ jobs:
           file: ./web/Dockerfile
           #platforms: linux/amd64,linux/arm64,linux/386,
           push: true
-          tags: theindiangeek/edjx-api:latest
+          tags: theindiangeek/edjx-web:latest
