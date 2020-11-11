@@ -41,3 +41,9 @@ jobs:
           #platforms: linux/amd64,linux/arm64,linux/386,
           push: true
           tags: theindiangeek/edjx-web:latest
+      - 
+        name: Deploy
+        uses: WyriHaximus/github-action-helm3@v2
+        with:
+          exec: helm upgrade -i --force --name=app app/
+          kubeconfig: '${{ secrets.KUBECONFIG }}'
